@@ -90,7 +90,7 @@
   </head>
   <body>
     <div id="container">
-      <h1>Cartograms with d3 &amp; TopoJSON</h1>
+      <h1>Europe Contiguous Cartogram with d3 &amp; TopoJSON</h1>
       <form>
         <p>
           <label>Scale by <select id="field"></select></label>
@@ -106,22 +106,9 @@
         <h2>About</h2>
         <p><a href="cartogram.js">cartogram.js</a> is a JavaScript implementation of
         <a href="http://lambert.nico.free.fr/tp/biblio/Dougeniketal1985.pdf">an algoritm to construct continuous area cartograms</a>,
-        by James A. Dougenik, Nicholas R. Chrisman and Duane R. Niemeyer,
-        &copy;1985 by the Association of American Geographers. This example combines
-        <a href="http://github.com/mbostock/topojson">TopoJSON</a>-encoded 
-        boundaries of the United States from
-        <a href="http://www.naturalearthdata.com/downloads/110m-cultural-vectors/">Natural Earth</a>
-        with
-        <a href="http://www.census.gov/popest/data/state/totals/2011/">2011 US Census population estimates</a>
-        to size each state proportionally.</p>
-        
-        <p>There&rsquo;s also a
-        <a class="hashish" href="?segmentized">segmentized topology</a>,
-        which distorts the shapes more fluidly than the
-        <a class="hashish" href="?">original</a>.</p>
+        by James A. Dougenik, Nicholas R. Chrisman and Duane R. Niemeyer.</p>>
 
-        <p>Designed and built by <a href="http://stamen.com/studio/shawn">Shawn Allen</a> at
-        <a href="http://stamen.com">Stamen</a>. But
+        <p>Designed and built by Felice De Luca. But
         <a href="http://d3js.org">d3.js</a> does most of the heavy lifting;
         colors by <a href="http://colorbrewer2.org">colorbrewer</a>.</p>
       </div>
@@ -198,7 +185,7 @@
             .attr("id", "states")
             .selectAll("path");
 
-      // map.call(zoom);
+      map.call(zoom);
       updateZoom();
 
       function updateZoom() {
